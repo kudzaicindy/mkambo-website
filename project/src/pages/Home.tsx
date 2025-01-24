@@ -109,7 +109,7 @@ const Home = () => {
             Join us in creating vibrant, sustainable marketplaces that benefit everyone.
             Let's work together to build the future of commerce.
           </p>
-          <button className="bg-white text-transparent bg-clip-text bg-gradient-to-r from-mkambo-orange-600 to-mkambo-green-600 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold border-2 border-white">
+          <button className="bg-white text-mkambo-orange-600 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold border-2 border-white">
             Contact Us Today
           </button>
         </div>
