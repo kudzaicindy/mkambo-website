@@ -14,7 +14,7 @@ const Home = () => {
           />
           <div className="absolute inset-0 bg-gradient-to-br from-mkambo-green-900/80 via-mkambo-orange-900/70 to-mkambo-green-900/80" />
         </div>
-        <div className="relative max-w-7xl mx-auto px-4 h-screen flex items-center">
+        <div className="relative max-w-6xl mx-auto px-4 h-screen flex items-center">
           <div className="text-white max-w-2xl">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
