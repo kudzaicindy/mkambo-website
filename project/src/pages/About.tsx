@@ -1,11 +1,11 @@
 import { motion } from 'framer-motion';
-import { Target, Heart, Users, TrendingUp } from 'lucide-react';
+import { Target, Heart, } from 'lucide-react';
 
 const About = () => {
   return (
     <div className="pt-20">
       {/* Hero Section */}
-      <div className="bg-orange-600 text-white py-20">
+      <div className="bg-gradient-to-r from-green-700 to-orange-600 text-white py-20">
         <div className="max-w-7xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -14,9 +14,36 @@ const About = () => {
             className="text-center"
           >
             <h1 className="text-4xl md:text-5xl font-bold mb-6">About Mkambo</h1>
-            <p className="text-xl text-orange-100 max-w-2xl mx-auto">
+            <p className="text-xl text-green-100 max-w-2xl mx-auto">
               Transforming traditional markets into modern, vibrant spaces for commerce and community.
             </p>
+          </motion.div>
+        </div>
+      </div>
+
+      {/* Emergency Response Banner */}
+      <div className="bg-gradient-to-r from-green-800 to-orange-700 text-white py-16">
+        <div className="max-w-7xl mx-auto px-4">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col md:flex-row items-center justify-between gap-8"
+          >
+            <div className="flex-1">
+              <h2 className="text-3xl font-bold mb-4">Mbare Musika Revival Initiative</h2>
+              <p className="text-lg text-green-50 leading-relaxed">
+                Following President E.D. Mnangagwa's national emergency declaration after the Mbare Musika fire, MkamboMisika Hubs has launched a comprehensive revival program.
+              </p>
+            </div>
+            <div className="flex-shrink-0">
+              <motion.button
+                whileHover={{ scale: 1.05 }}
+                className="bg-white text-orange-600 px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-green-50 transition-colors"
+              >
+                Join Our Initiative
+              </motion.button>
+            </div>
           </motion.div>
         </div>
       </div>
@@ -29,10 +56,10 @@ const About = () => {
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
-              className="bg-orange-50 p-8 rounded-xl"
+              className="bg-green-50 p-8 rounded-xl"
             >
               <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
-                <Target className="w-6 h-6 text-orange-600" />
+                <Target className="w-6 h-6 text-green-600" />
               </div>
               <h2 className="text-2xl font-bold mb-4">Our Mission</h2>
               <p className="text-gray-600 leading-relaxed">
@@ -47,7 +74,7 @@ const About = () => {
               transition={{ duration: 0.8 }}
               className="bg-orange-50 p-8 rounded-xl"
             >
-              <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-6">
+              <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mb-6">
                 <Heart className="w-6 h-6 text-orange-600" />
               </div>
               <h2 className="text-2xl font-bold mb-4">Our Vision</h2>
@@ -62,7 +89,7 @@ const About = () => {
       </div>
 
       {/* Values */}
-      <div className="py-20 bg-orange-50">
+      <div className="py-20 bg-green-50">
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl font-bold mb-4">Our Values</h2>
@@ -126,17 +153,17 @@ const About = () => {
               {
                 name: 'Collins Jimu',
                 role: 'Project Director',
-                // image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80'
+                image: '/placeholder-avatar.jpg'
               },
               {
                 name:'Paul Kofa',
                 role: 'Community Relations',
-                // image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80'
+                image: '/placeholder-avatar.jpg'
               },
               {
                 name: 'Zvikomborero Claire',
                 role: 'Operations Manager',
-                // image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80'
+                image: '/placeholder-avatar.jpg'
               }
             ].map((member, index) => (
               <motion.div
@@ -163,4 +190,3 @@ const About = () => {
 };
 
 export default About;
-
