@@ -161,7 +161,7 @@ const About = () => {
                 image:  'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80'
               },
               {
-                name: 'Zvikomborero Claire',
+                name: 'Zviko Claire',
                 role: 'Operations Manager',
                 image: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=300&h=300&q=80'
               }
