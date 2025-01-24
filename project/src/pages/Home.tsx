@@ -8,7 +8,7 @@ const Home = () => {
       <div className="relative min-h-screen">
         <div className="absolute inset-0">
           <img
-            src="/mkambo1.jpg"
+            src="/mkambo11.jpg"
             alt="Mbare Market"
             className="w-full h-full object-cover"
           />

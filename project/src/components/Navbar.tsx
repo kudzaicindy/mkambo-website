@@ -23,7 +23,7 @@ const Navbar = () => {
               alt="Mkambo Logo"
               className="h-12 w-12 rounded-full"
             />
-            <span className="ml-3 text-xl font-bold text-orange-600">
+            <span className="ml-3 text-3xl font-bold text-orange-600">
               Mkambo Marketing Hub
             </span>
           </Link>
