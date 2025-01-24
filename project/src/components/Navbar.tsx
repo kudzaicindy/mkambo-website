@@ -7,29 +7,32 @@ const Navbar = () => {
   const location = useLocation();
 
   const navigation = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Gallery', path: '/gallery' },
-    { name: 'Contact', path: '/contact' },
+    { name: 'HOME', path: '/' },
+    { name: 'ABOUT', path: '/about' },
+    { name: 'GALLERY', path: '/gallery' },
+    { name: 'RESOURCES', path: '/resources' },
   ];
 
   return (
     <nav className="fixed w-full bg-white shadow-lg z-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center">
-            <img
-              src="/logo.png"
-              alt="Mkambo Logo"
-              className="h-12 w-12 rounded-full"
-            />
-            <span className="ml-3 text-3xl font-bold text-orange-600">
-              Mkambo Marketing Hub
-            </span>
-          </Link>
+      <div className="max-w-8xl mx-auto px-3">
+        <div className="flex items-center h-20">
+         
+          <div className="flex-1 pl-8">
+            <Link to="/" className="flex items-center">
+              <img
+                src="/logo.png"
+                alt="Mkambo Logo"
+                className="h-12 w-12 rounded-full"
+              />
+              <span className="ml-3 text-3xl font-bold text-orange-600 sm:text-3xl text-xl">
+                Mkambo Marketing Hub
+              </span>
+            </Link>
+          </div>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+         
+          <div className="hidden md:flex items-center justify-center flex-[2] space-x-8">
             {navigation.map((item) => (
               <Link
                 key={item.path}
@@ -45,17 +48,21 @@ const Navbar = () => {
             ))}
           </div>
 
-          {/* Mobile menu button */}
-          <div className="md:hidden">
-            <button
-              onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-orange-600 hover:bg-orange-50"
+       
+          <div className="flex-1 flex justify-end pr-8">
+            <Link
+              to="/contact"
+              className="hidden md:block px-4 py-2 rounded-md text-sm font-medium bg-orange-600 text-white hover:bg-orange-700 transition-colors"
             >
-              {isOpen ? (
-                <X className="block h-6 w-6" />
-              ) : (
-                <Menu className="block h-6 w-6" />
-              )}
+              CONTACT
+            </Link>
+            
+            {/* Mobile Menu Button */}
+            <button
+              className="md:hidden rounded-md p-2 text-gray-600 hover:text-orange-600 hover:bg-orange-50"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              {isOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
           </div>
         </div>
@@ -79,6 +86,13 @@ const Navbar = () => {
                 {item.name}
               </Link>
             ))}
+            <Link
+              to="/contact"
+              className="block px-3 py-2 rounded-md text-base font-medium bg-orange-600 text-white hover:bg-orange-700 transition-colors"
+              onClick={() => setIsOpen(false)}
+            >
+              CONTACT
+            </Link>
           </div>
         </div>
       )}
