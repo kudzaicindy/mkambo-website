@@ -25,7 +25,7 @@ const Navbar = () => {
                 alt="Mkambo Logo"
                 className="h-12 w-12 rounded-full"
               />
-              <span className="ml-3 text-3xl font-bold text-orange-600 sm:text-3xl text-xl">
+              <span className="ml-3 text-2xl font-bold text-orange-600 sm:text-3xl text-xl">
                 Mkambo Marketing Hub
               </span>
             </Link>
@@ -50,12 +50,12 @@ const Navbar = () => {
 
        
           <div className="flex-1 flex justify-end pr-8">
-            <Link
+            {/* <Link
               to="/contact"
               className="hidden md:block px-4 py-2 rounded-md text-sm font-medium bg-orange-600 text-white hover:bg-orange-700 transition-colors"
             >
               CONTACT
-            </Link>
+            </Link> */}
             
             {/* Mobile Menu Button */}
             <button
