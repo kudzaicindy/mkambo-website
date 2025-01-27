@@ -54,8 +54,10 @@ const Home: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="bg-gradient-to-r from-mkambo-orange-500 to-mkambo-green-500 text-white px-8 py-3 rounded-lg flex items-center gap-2 hover:from-mkambo-orange-600 hover:to-mkambo-green-600 transition-all duration-300 shadow-lg"
             >
-              Learn More
-              <ArrowRight className="w-5 h-5" />
+              <Link to="/about" className="flex items-center gap-2">
+                Learn More
+                <ArrowRight className="w-5 h-5" />
+              </Link>
             </motion.button>
           </div>
         </div>
