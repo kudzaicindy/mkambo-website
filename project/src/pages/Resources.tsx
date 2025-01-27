@@ -24,13 +24,13 @@ const Resources: React.FC = () => {
         {/* Header */}
         <div className="text-center mb-12">
           {/* <h1 className="text-4xl font-bold text-gray-900 mb-4">Resources</h1> */}
-          <p className="text-lg text-gray-600">
+          <p className="text-lg text-gray-600 mt-20">
             Download useful documents and resources for your needs
           </p>
         </div>
 
         {/* Resources Grid */}
-        <div className="flex justify-center items-center">
+        <div className="flex justify-center mt-20 items-center">
           <div className="max-w-xl w-full">
             {resources.map((resource: Resource, index: number) => (
               <div 
