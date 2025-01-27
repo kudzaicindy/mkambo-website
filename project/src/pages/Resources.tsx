@@ -71,7 +71,7 @@ const Resources: React.FC = () => {
                   <a
                     href={resource.downloadUrl}
                     download
-                    className="inline-flex items-center px-4 py-2 bg-orange-600 text-white rounded-md hover:bg-orange-700 transition-colors"
+                    className="inline-flex items-center px-4 py-2 bg-gray-900 text-white rounded-md hover:bg-orange-700 transition-colors"
                   >
                     <span className="mr-2">Download</span>
                     <svg 
