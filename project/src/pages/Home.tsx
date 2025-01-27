@@ -1,9 +1,23 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, ShoppingBag, Users, Building, TrendingUp } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import React, { useEffect } from 'react';
 
+const Home: React.FC = () => {
+  useEffect(() => {
+    // Attempt to disable browser's automatic scroll restoration
+    if ('scrollRestoration' in window.history) {
+      window.history.scrollRestoration = 'manual';
+    }
 
-const Home = () => {
+    // Delay scrolling to top to ensure it happens after everything has loaded/rendered
+    const timer = setTimeout(() => {
+      window.scrollTo(0, 0);
+    }, 100); // Adjust delay as needed
+
+    return () => clearTimeout(timer); // Cleanup the timer
+  }, []); // Empty dependency array ensures this runs only once on mount
+
   return (
     <div>
       {/* Hero Section */}
@@ -112,9 +126,8 @@ const Home = () => {
             Let's work together to build the future of commerce.
           </p>
           <Link to="/contact" className="bg-white text-mkambo-orange-600 px-8 py-3 rounded-lg hover:bg-gray-50 transition-colors font-semibold border-2 border-white inline-block">
-  Contact Us Today
-</Link>
-
+            Contact Us Today
+          </Link>
         </div>
       </div>
     </div>
