@@ -1,10 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const navigation = [
     { name: 'HOME', path: '/' },
@@ -26,7 +36,7 @@ const Navbar = () => {
                 className="h-12 w-12 rounded-full"
               />
               <span className="ml-3 text-2xl font-bold text-orange-600 sm:text-3xl text-xl">
-                Mkambo Marketing Hub
+                {isMobile ? 'Mkambo Hub' : 'Mkambo Marketing Hub'}
               </span>
             </Link>
           </div>
